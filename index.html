@@ -48,8 +48,11 @@ section{padding:46px 30px;text-align:center;position:relative}
 .reveal.in{opacity:1;transform:none}
 
 .hero{padding:0 0 26px}
-.hero .photo{width:100%;margin:0;mix-blend-mode:multiply}
-.hero .mis{margin-top:-10px}
+.heroimg{position:relative;padding-top:62px;background:linear-gradient(180deg,var(--baby) 0,var(--baby) 82%,var(--cream) 100%);overflow:hidden}
+.hero .photo{display:block;width:100%;margin:0;mix-blend-mode:multiply;position:relative;z-index:1}
+.heroimg .flor{position:absolute;top:0;width:54%;z-index:2;pointer-events:none}
+.heroimg .fl{left:0}.heroimg .fr{right:0}
+.hero .mis{margin-top:8px}
 .hero .name{font-size:clamp(72px,22vw,108px)}
 .surname{font-family:'Pinyon Script','Brush Script MT',cursive;font-size:clamp(40px,12.5vw,54px);color:var(--navy);margin-top:4px;line-height:1.05}
 h2{font-family:'Great Vibes','Brush Script MT',cursive;font-weight:400;font-size:46px;color:var(--navy);line-height:1.05;margin-bottom:10px}
@@ -155,7 +158,11 @@ footer{background:var(--cream);text-align:center;padding:0 20px 28px;font-size:1
 
   <!-- HERO -->
   <section class="hero">
-    <img class="photo" data-fx="8" src="img/valery.jpg" alt="Valery Suárez Corrales, quinceañera">
+    <div class="heroimg">
+      <img class="photo" data-fx="8" src="img/valery.jpg" alt="Valery Suárez Corrales, quinceañera">
+      <img class="flor fl" data-fx="4" src="img/flores_izq.png" alt="">
+      <img class="flor fr" data-fx="4" src="img/flores_der.png" alt="">
+    </div>
     <div class="mis">MIS XV</div>
     <div class="name">Valery</div>
     <div class="surname">Suárez Corrales</div>
