@@ -98,12 +98,15 @@ p{font-size:17px;line-height:1.7}
 .cd .sep{min-width:0;font-size:36px;line-height:1.15;opacity:.6}
 
 /* dress code */
-.swatches{display:flex;justify-content:center;gap:26px;margin:20px 0 8px}
+.swatches{display:flex;justify-content:center;align-items:flex-start;gap:26px;margin:20px 0 8px}
 .sw{width:96px}
-.sw i{display:block;width:78px;height:78px;border-radius:50%;box-shadow:0 6px 16px rgba(74,101,145,.25),inset 0 0 0 4px #fff}
-.sw span{display:block;margin-top:10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.sw i{display:block;margin:0 auto;width:78px;height:78px;border-radius:50%;box-shadow:0 6px 16px rgba(74,101,145,.25),inset 0 0 0 4px #fff}
+.sw span{display:block;text-align:center;margin-top:10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
 .hanger{width:46px;margin:6px auto 4px;stroke:var(--navy);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 
+/* mesa de regalos */
+.envelope{width:84px;margin:8px auto 14px;stroke:var(--navy);fill:#fff;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 6px 10px rgba(74,101,145,.2))}
+.envelope .heart{fill:var(--baby-2);stroke:var(--navy);stroke-width:1.2}
 /* invitan */
 .parents p.n{font-size:19px;letter-spacing:.04em;color:var(--ink);font-weight:400;margin-bottom:14px}
 
@@ -227,11 +230,18 @@ footer{background:var(--cream);text-align:center;padding:0 20px 28px;font-size:1
     </div>
   </section>
 
+  <!-- MESA DE REGALOS -->
+  <section class="reveal gift">
+    <h2>Mesa de Regalos</h2>
+    <svg class="envelope" viewBox="0 0 64 48" aria-hidden="true"><rect x="3" y="5" width="58" height="38" rx="4"/><path d="M4 8l28 21L60 8"/><path d="M32 22.5c-3.2-3-6-1.2-6 1.2 0 2.6 4 5 6 6.3 2-1.3 6-3.7 6-6.3 0-2.4-2.8-4.2-6-1.2z" class="heart"/></svg>
+    <p>Tu presencia será mi mejor regalo.<br>Si deseas tener un detalle conmigo, agradeceré una <b style="font-weight:500">lluvia de sobres</b>.</p>
+  </section>
+
   <!-- CONFIRMAR -->
   <section class="final reveal">
     <div class="in">
       <h2>Confirmar Asistencia</h2>
-      <p>Tu presencia será mi mejor regalo.<br>Confirma tu asistencia para esta noche inolvidable.</p>
+      <p>Confirma tu asistencia para esta noche inolvidable.</p>
       <a class="btn" id="rsvp" href="#">
         <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zm2 2v.5l7 5 7-5V7zm14 3.9-7 5-7-5V17h14z"/></svg></span>
         Confirmar asistencia
