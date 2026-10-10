@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mis XV · Valery Suárez Corrales</title>
+<meta name="description" content="Estás invitado a los XV años de Valery Suárez Corrales · 15 de noviembre de 2026 · 7:00 pm · Solano Social, Plaza Real de Soledad.">
+<meta property="og:title" content="Mis XV · Valery Suárez Corrales">
+<meta property="og:description" content="15 de noviembre de 2026 · 7:00 pm · Solano Social, Soledad (Atlántico)">
+<meta property="og:image" content="img/valery.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --baby:#dfebf6;      /* baby blue */
+  --baby-2:#c9dcef;
+  --cream:#f9f4f1;
+  --silver:#9aa6b8;    /* gris plata */
+  --silver-2:#c3cad6;
+  --navy:#4a6591;
+  --ink:#5a6f93;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--baby);color:var(--ink);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden;height:100vh}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* ---------- PORTADA ---------- */
+#cover{position:fixed;inset:0;z-index:50;background:var(--baby);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:12vh;transition:opacity 1.2s ease,visibility 1.2s;cursor:pointer;overflow:hidden}
+#cover.gone{opacity:0;visibility:hidden}
+#cover .castle{position:absolute;left:50%;transform:translateX(-50%);bottom:0;height:44vh;max-height:460px;opacity:.75}
+#cover .title{position:relative;text-align:center;z-index:2}
+.mis{font-size:clamp(26px,7vw,40px);letter-spacing:.06em;color:var(--navy);font-weight:400}
+.name{font-family:'Great Vibes','Brush Script MT',cursive;color:var(--navy);line-height:.9;font-size:clamp(76px,22vw,128px);text-shadow:0 1px 0 rgba(255,255,255,.4)}
+.seal{position:relative;width:min(46vw,210px);margin-top:5vh;z-index:3;animation:pulse 2.8s ease-in-out infinite;filter:drop-shadow(0 12px 14px rgba(74,101,145,.28))}
+.tap{font-weight:500;margin-top:14px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink);z-index:3}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+
+/* ---------- COLUMNA ---------- */
+#invite{max-width:460px;margin:0 auto;background:var(--cream);box-shadow:0 0 0 14px var(--baby),0 0 60px rgba(74,101,145,.18);position:relative}
+section{padding:46px 30px;text-align:center;position:relative}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s ease}
+.reveal.in{opacity:1;transform:none}
+
+.hero{padding:0 0 26px}
+.hero .photo{width:100%;margin:0;mix-blend-mode:multiply}
+.hero .mis{margin-top:-10px}
+.hero .name{font-size:clamp(72px,22vw,108px)}
+.surname{font-family:'Pinyon Script','Brush Script MT',cursive;font-size:clamp(40px,12.5vw,54px);color:var(--navy);margin-top:4px;line-height:1.05}
+h2{font-family:'Great Vibes','Brush Script MT',cursive;font-weight:400;font-size:46px;color:var(--navy);line-height:1.05;margin-bottom:10px}
+h3{font-family:'Pinyon Script','Brush Script MT',cursive;font-weight:400;font-size:34px;color:var(--navy);margin-bottom:4px}
+.small-caps{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink);font-weight:400}
+p{font-size:14.5px;line-height:1.7}
+.tiara{width:120px;margin:0 auto 14px}
+
+/* reproductor */
+.player{display:flex;align-items:center;justify-content:center;gap:16px;margin:12px 0 30px}
+.play{width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;background:radial-gradient(circle at 35% 30%,#fff,#bcd3ec 70%);box-shadow:0 4px 12px rgba(74,101,145,.35),inset 0 0 0 2px #fff;display:grid;place-items:center}
+.play svg{width:18px;height:18px;fill:var(--navy)}
+.bar{width:120px;height:3px;border-radius:3px;background:var(--baby-2);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--navy)}
+.hint{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);font-weight:400}
+
+/* cinta azul con dibujo */
+.band{position:relative;padding:0;height:210px;display:flex;justify-content:center;align-items:flex-end;overflow:hidden}
+.band::before{content:"";position:absolute;left:0;right:0;top:112px;height:40px;background:var(--baby);box-shadow:0 0 0 0 transparent}
+.band::after{content:"";position:absolute;left:0;right:0;top:152px;height:40px;background-image:radial-gradient(circle,#b9c2d0 1px,transparent 1.5px);background-size:9px 9px;opacity:.5;mask-image:linear-gradient(#000,transparent)}
+.band .gw{position:relative;z-index:2;margin-bottom:12px}.band img{height:176px;width:auto}
+
+.date{font-family:'Great Vibes','Brush Script MT',cursive;font-size:44px;color:var(--navy);line-height:1}
+.date-big{font-size:46px;letter-spacing:.04em;font-weight:400;color:var(--navy);margin:2px 0 6px}
+.year{letter-spacing:.5em;font-size:13px;color:var(--silver);font-weight:500}
+
+.card{background:#fff;border-radius:18px;padding:22px 18px;box-shadow:0 8px 30px rgba(74,101,145,.12);border:1px solid #e6eef7;margin-top:18px}
+.card h3{margin-bottom:6px}
+.time{font-size:26px;font-weight:400;letter-spacing:.06em;color:var(--navy);margin:2px 0 8px}
+.addr{font-size:13.5px;line-height:1.6}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:12px 26px 12px 14px;border-radius:40px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--navy);background:linear-gradient(135deg,#f7fbff,#cfe0f2);box-shadow:0 5px 14px rgba(74,101,145,.25),inset 0 0 0 1.5px #fff;cursor:pointer;border:0;font-family:inherit;transition:transform .2s}
+.btn:active{transform:scale(.97)}
+.btn .ic{width:30px;height:30px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:inset 0 0 0 1.5px var(--baby-2)}
+.btn .ic svg{width:16px;height:16px;fill:var(--navy)}
+
+.clock{width:170px;margin:0 auto 6px}
+
+/* cuenta regresiva */
+.count{background:var(--baby);padding:30px 18px 36px}
+.count h3{font-size:36px}
+.carriage{width:210px;margin:0 auto}
+.cd{display:flex;justify-content:center;gap:6px;margin-top:10px;font-weight:400;color:var(--navy)}
+.cd div{min-width:64px}
+.cd b{display:block;font-weight:400;font-size:40px;letter-spacing:.02em}
+.cd span{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink)}
+.cd .sep{min-width:0;font-size:36px;line-height:1.15;opacity:.6}
+
+/* dress code */
+.swatches{display:flex;justify-content:center;gap:26px;margin:20px 0 8px}
+.sw{width:78px}
+.sw i{display:block;width:78px;height:78px;border-radius:50%;box-shadow:0 6px 16px rgba(74,101,145,.25),inset 0 0 0 4px #fff}
+.sw span{display:block;margin-top:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.hanger{width:46px;margin:6px auto 4px;stroke:var(--navy);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+
+/* invitan */
+.parents p.n{font-size:15px;letter-spacing:.04em;color:var(--ink);font-weight:400;margin-bottom:14px}
+
+/* final */
+.final{padding:34px 0 0;overflow:hidden}
+.final .in{padding:0 30px}
+.final .gw{width:100%;margin-top:18px}.final .castle{width:100%}
+footer{background:var(--cream);text-align:center;padding:0 20px 28px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--silver)}
+
+/* destellos mínimos sobre los dibujos */
+.gw{position:relative;display:block;width:fit-content;margin-left:auto;margin-right:auto}
+.gw>img{display:block}
+.glint{position:absolute;width:var(--s,9px);height:var(--s,9px);background:#fff;pointer-events:none;opacity:0;
+  clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);
+  filter:drop-shadow(0 0 3px #bcd8f5) drop-shadow(0 0 1px #fff);animation:tw var(--d,3.6s) ease-in-out var(--l,0s) infinite}
+@keyframes tw{0%,60%,100%{opacity:0;transform:scale(.3) rotate(0)}75%{opacity:1;transform:scale(1) rotate(25deg)}88%{opacity:.5;transform:scale(.6) rotate(45deg)}}
+@media (prefers-reduced-motion:reduce){.glint{animation:none;opacity:.6}}
+/* destellos mínimos sobre las imágenes */
+.tw{position:absolute;width:var(--s,9px);height:var(--s,9px);pointer-events:none;z-index:5;opacity:0;
+  background:#fff;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);
+  filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #6fa5dd);animation:twinkle var(--d,3.4s) ease-in-out var(--t,0s) infinite}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.2) rotate(0)}30%,55%{opacity:1;transform:scale(1) rotate(45deg)}80%{opacity:.15;transform:scale(.5) rotate(90deg)}}
+/* destellos que caen al abrir */
+.spark{position:fixed;top:-20px;pointer-events:none;z-index:40;color:#fff;text-shadow:0 0 6px #9ec4ea;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(180deg);opacity:0}}
+
+</style>
+</head>
+<body class="locked">
+
+<audio id="song" src="img/cancion.mp3" loop preload="auto"></audio>
+
+<!-- PORTADA -->
+<div id="cover" role="button" aria-label="Abrir invitación">
+  <img class="castle" src="img/castillo_portada_c.png" alt="">
+  <div class="title">
+    <div class="mis">MIS XV</div>
+    <div class="name">Valery</div>
+    <div class="surname">Suárez Corrales</div>
+  </div>
+  <img class="seal" data-fx="5" src="img/sello_c.png" alt="Sello XV años">
+  <div class="tap">Toca el sello para abrir</div>
+</div>
+
+<main id="invite">
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="photo" data-fx="8" src="img/valery.jpg" alt="Valery Suárez Corrales, quinceañera">
+    <div class="mis">MIS XV</div>
+    <div class="name">Valery</div>
+    <div class="surname">Suárez Corrales</div>
+  </section>
+
+  <section class="reveal" style="padding-top:20px">
+    <div class="hint">Reproduce mi canción</div>
+    <div class="player">
+      <button class="play" id="playBtn" aria-label="Reproducir o pausar">
+        <svg id="ico" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <div class="bar"><i id="prog"></i></div>
+    </div>
+    <img class="tiara" data-fx="4" src="img/tiara_c.png" alt="">
+    <p>Con la bendición de Dios y el amor de quienes han guiado mis pasos hasta este momento tan especial, quiero compartir contigo la noche más mágica de mi vida.</p>
+  </section>
+
+  <section class="reveal parents" style="padding-top:6px">
+    <h3>Invitan</h3>
+    <p class="n">Leidis Corrales<br>&amp;<br>Marlon Suárez</p>
+  </section>
+
+  <!-- ZAPATILLA + FECHA -->
+  <div class="band reveal"><div class="gw"><img data-fx="9" src="img/zapatilla_c.png" alt=""></div></div>
+
+  <section class="reveal" style="padding-top:22px">
+    <p>Te invito a compartir conmigo esta fecha<br>que recordaré para siempre.</p>
+    <div style="height:14px"></div>
+    <div class="date">Domingo 15 de</div>
+    <div class="date-big">NOVIEMBRE</div>
+    <div class="year">2 0 2 6</div>
+
+    <div class="card">
+      <h3>Recepción</h3>
+      <div class="time">7:00 PM</div>
+      <p class="addr"><b style="font-weight:500">Solano Social</b><br>Plaza Real de Soledad<br>Cl. 13 #20-2, Soledad, Atlántico</p>
+      <a class="btn" href="https://share.google/ZqDkhgPm4znEe8b93" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+        Ver mapa
+      </a>
+    </div>
+  </section>
+
+  <!-- RELOJ -->
+  <section class="reveal" style="padding-top:14px">
+    <img class="clock" data-fx="7" src="img/reloj_c.png" alt="Reloj marcando las 12">
+    <h2>Mi gran noche</h2>
+    <p>Las puertas se abren a las <b style="font-weight:500">7:00 pm</b>.<br>Te pido puntualidad para no perdernos ni un momento.</p>
+  </section>
+
+  <!-- CUENTA REGRESIVA -->
+  <section class="count reveal">
+    <img class="carriage" data-fx="8" src="img/carruaje_c.png" alt="Carruaje">
+    <h3>Faltan para mi gran noche…</h3>
+    <div class="cd" id="cd">
+      <div><b id="d">--</b><span>Días</span></div><div class="sep">:</div>
+      <div><b id="h">--</b><span>Horas</span></div><div class="sep">:</div>
+      <div><b id="m">--</b><span>Minutos</span></div><div class="sep">:</div>
+      <div><b id="s">--</b><span>Segundos</span></div>
+    </div>
+  </section>
+
+  <!-- DRESS CODE -->
+  <section class="reveal">
+    <h2>Dress Code</h2>
+    <svg class="hanger" viewBox="0 0 48 40"><path d="M24 12a4 4 0 1 0-4-4"/><path d="M24 12v4L4 30a3 3 0 0 0 2 5h36a3 3 0 0 0 2-5L24 16"/></svg>
+    <div class="small-caps" style="margin:6px 0 10px">Formal elegante</div>
+    <p>Los colores <b style="font-weight:500">baby blue</b> y <b style="font-weight:500">gris plata</b> están reservados para la quinceañera.</p>
+    <div class="swatches">
+      <div class="sw"><i style="background:linear-gradient(135deg,#eaf3fc,#a9cbeb)"></i><span>Baby blue</span></div>
+      <div class="sw"><i style="background:linear-gradient(135deg,#eef0f4,#9aa3b3 55%,#d9dde5)"></i><span>Gris plata</span></div>
+    </div>
+  </section>
+
+  <!-- CONFIRMAR -->
+  <section class="final reveal">
+    <div class="in">
+      <h2>Confirmar Asistencia</h2>
+      <p>Tu presencia será mi mejor regalo.<br>Confirma tu asistencia para esta noche inolvidable.</p>
+      <a class="btn" id="rsvp" href="#">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zm2 2v.5l7 5 7-5V7zm14 3.9-7 5-7-5V17h14z"/></svg></span>
+        Confirmar asistencia
+      </a>
+    </div>
+    <img class="castle" data-fx="14" src="img/castillo_final_c.png" alt="Castillo">
+  </section>
+  <footer>Valery Suárez Corrales · XV · 15.11.2026</footer>
+</main>
+
+<script>
+/* ===== CONFIGURA AQUÍ ===== */
+const WHATSAPP = "573215805239";   // WhatsApp para confirmar asistencia (57 = Colombia)
+/* ========================== */
+
+const song=document.getElementById('song'),cover=document.getElementById('cover'),
+      playBtn=document.getElementById('playBtn'),ico=document.getElementById('ico'),prog=document.getElementById('prog');
+const PLAY='M8 5v14l11-7z',PAUSE='M6 5h4v14H6zm8 0h4v14h-4z';
+
+function setIcon(p){ico.firstElementChild.setAttribute('d',p?PAUSE:PLAY)}
+function sparkle(n){
+  for(let i=0;i<n;i++){
+    const s=document.createElement('div');s.className='spark';s.textContent=Math.random()>.5?'✦':'✧';
+    s.style.left=Math.random()*100+'vw';s.style.fontSize=(10+Math.random()*16)+'px';
+    s.style.animationDuration=(4+Math.random()*4)+'s';s.style.animationDelay=(Math.random()*1.5)+'s';
+    document.body.appendChild(s);setTimeout(()=>s.remove(),9000);
+  }
+}
+cover.addEventListener('click',()=>{
+  cover.classList.add('gone');document.body.classList.remove('locked');
+  song.play().then(()=>setIcon(true)).catch(()=>{});
+  sparkle(24);
+  window.scrollTo(0,0);
+});
+playBtn.addEventListener('click',()=>{ if(song.paused){song.play();setIcon(true)}else{song.pause();setIcon(false)} });
+song.addEventListener('timeupdate',()=>{prog.style.width=(song.currentTime/(song.duration||1)*100)+'%'});
+
+
+
+/* destellos mínimos sobre cada dibujo (como en el video) */
+function addTwinkles(img,n){
+  const p=img.offsetParent||img.parentElement; if(!p) return;
+  p.querySelectorAll('.tw[data-for="'+img.dataset.id+'"]').forEach(e=>e.remove());
+  const x=img.offsetLeft,y=img.offsetTop,w=img.offsetWidth,h=img.offsetHeight;
+  for(let i=0;i<n;i++){
+    const t=document.createElement('i');t.className='tw';t.dataset.for=img.dataset.id;
+    t.style.left=(x+w*(.08+Math.random()*.84))+'px';t.style.top=(y+h*(.08+Math.random()*.84))+'px';
+    t.style.setProperty('--s',(10+Math.random()*10)+'px');
+    t.style.setProperty('--d',(2.6+Math.random()*2.4)+'s');
+    t.style.setProperty('--t',(Math.random()*4)+'s');
+    p.appendChild(t);
+  }
+}
+const fxImgs=[...document.querySelectorAll('img[data-fx]')];
+fxImgs.forEach((im,i)=>{im.dataset.id='fx'+i});
+function setupFx(){fxImgs.forEach(im=>addTwinkles(im,+im.dataset.fx||5))}
+fxImgs.forEach(im=>{if(im.complete)return;im.addEventListener('load',setupFx)});
+window.addEventListener('load',setupFx);window.addEventListener('resize',setupFx);
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* cuenta regresiva: 15 nov 2026, 7:00 pm hora Colombia (UTC-5) */
+const target=new Date('2026-11-15T19:00:00-05:00').getTime();
+const pad=n=>String(n).padStart(2,'0');
+function tick(){
+  let t=Math.max(0,target-Date.now());
+  const d=Math.floor(t/864e5);t%=864e5;
+  const h=Math.floor(t/36e5);t%=36e5;
+  const m=Math.floor(t/6e4),s=Math.floor(t%6e4/1e3);
+  document.getElementById('d').textContent=d;
+  document.getElementById('h').textContent=pad(h);
+  document.getElementById('m').textContent=pad(m);
+  document.getElementById('s').textContent=pad(s);
+}
+tick();setInterval(tick,1000);
+
+/* confirmar por WhatsApp */
+document.getElementById('rsvp').addEventListener('click',e=>{
+  e.preventDefault();
+  const msg=encodeURIComponent('Hola, confirmo mi asistencia a los XV años de Valery Suárez Corrales el 15 de noviembre de 2026. 💙');
+  window.open('https://wa.me/'+WHATSAPP+'?text='+msg,'_blank');
+});
+</script>
+</body>
+</html>
